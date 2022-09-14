@@ -22,8 +22,6 @@ jobs:
 
       - name: Submodule Update
         run: |
-          git submodule update --init --recursive
-          git submodule update --remote
           sudo apt-get -y update
           sudo apt-get -y install chromium-browser
           sudo apt-get -y install google-chrome-stable
@@ -35,9 +33,9 @@ jobs:
 
       - name: Install and Run
         run: |
-          ls
-          pip install -r loconotion/requirements.txt
-          python loconotion kb.toml > test.log 2>&1
+          cd loconotion
+          pip install -r requirements.txt
+          python loconotion kb/kb.toml > test.log 2>&1
 
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
