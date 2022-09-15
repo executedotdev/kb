@@ -23,8 +23,7 @@ jobs:
       - name: Submodule Update
         run: |
           sudo apt-get -y update
-          # chrome version 104
-          sudo apt-get -y install chromium-browser=104.0.5112.20
+          sudo apt-get -y install chromium-browser=80.0.3987.163-0ubuntu1  
           sudo apt-get -y install google-chrome-stable
 
       - name: Set up Python
