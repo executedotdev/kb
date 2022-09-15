@@ -35,8 +35,7 @@ jobs:
 
       - name: Install and Run
         run: |
-          cd ${GITHUB_WORKSPACE}/loconotion
-          pip install -r requirements.txt
+          pip install -r loconotion/requirements.txt
           python loconotion example/example_site.toml > test.log 2>&1
 
       - name: Deploy to Pages
